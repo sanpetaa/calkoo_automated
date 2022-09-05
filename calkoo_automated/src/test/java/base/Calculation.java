@@ -3,10 +3,13 @@ package base;
 import org.apache.commons.math3.util.Precision;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.asserts.SoftAssert;
 
 public class Calculation extends BaseTest {
 
 	public static void comparePricesFilledByNetPrice() {
+		//soft assert
+		SoftAssert softassert = new SoftAssert();
 
 		// add X to the NETPRICE
 		WebElement NetPrice = driver.findElement(By.xpath(loc.getProperty("NetPrice")));
@@ -30,6 +33,10 @@ public class Calculation extends BaseTest {
 		double pit = pwv + localVATsum;
 		double localPrice = Precision.round(pit, 2);
 
+		
+		
+		//localVATsum ez kell vissza
+		//de helyette megy be localPrice
 		// compare prices from the site vs prices calculated
 		if (vatsumfromsite == localVATsum) {
 			System.out.println("The Value-Added Tax from the site " + vatsumfromsite + " is equal to the calculated "
@@ -37,7 +44,9 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("The Value-Added Tax from the site " + vatsumfromsite
 					+ " is NOT equal to the calculated " + localVATsum);
-			org.testng.Assert.fail();
+			// org.testng.Assert.fail();
+			softassert.assertEquals(vatsumfromsite, localVATsum, "ERROR: The Value-Added Tax from the site"
+					+ vatsumfromsite + "is NOT equal to the calculated" + localVATsum);
 		}
 		;
 
@@ -48,7 +57,8 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("Price incl. Tax from the site " + pricefromsite + "  is NOT equal to the calculated "
 					+ localPrice);
-			org.testng.Assert.fail();
+			softassert.assertEquals(pricefromsite,localPrice,  "ERROR: The Value-Added Tax from the site"
+					+ pricefromsite + "is NOT equal to the calculated" + localPrice);
 		}
 		;
 
@@ -88,7 +98,7 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("The higher local " + higherpiechartfromlocal
 					+ " pie chart % is NOT equal to the higher pie chart % from the site " + higherpiechartfromsite);
-			org.testng.Assert.fail();
+			softassert.assertEquals(higherpiechartfromlocal,higherpiechartfromsite, "ERROR: The higher local" + higherpiechartfromlocal+ " pie chart % is NOT equal to the higher pie chart % from the site" + higherpiechartfromsite);
 		}
 
 		// local pie chart lower value
@@ -102,15 +112,19 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("The lower local " + lowerpiechartfromlocal
 					+ " pie chart % is NOT equal to the higher pie chart % from the site " + lowerpiechartfromsite);
-			org.testng.Assert.fail();
+			softassert.assertEquals(lowerpiechartfromlocal,lowerpiechartfromsite, "ERROR: The higher local" + higherpiechartfromlocal+ " pie chart % is NOT equal to the higher pie chart % from the site" + lowerpiechartfromsite);
 		}
 
 		// delete NetPrice sendkey from field
 		Tools.clearWebField(NetPrice);
+		softassert.assertAll();
 		System.out.println("\n");
 	}
 
 	public static void comparePricesFilledByVatSum() {
+		//soft assert
+		SoftAssert softassert = new SoftAssert();
+
 
 		// add X for VATSUM
 		WebElement VatSum = driver.findElement(By.xpath(loc.getProperty("VatSum")));
@@ -141,7 +155,8 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("Theprice without VAT from the site " + netpricefromsite
 					+ " is NOT equal to the calculated " + localVATsum);
-			org.testng.Assert.fail();
+			softassert.assertEquals(netpricefromsite, localNetPrice, "ERROR: The Value-Added Tax from the site"
+					+ netpricefromsite + "is NOT equal to the calculated" + localNetPrice);
 		}
 		;
 
@@ -152,7 +167,8 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("Price incl. Tax from the site " + pricefromsite + "  is NOT equal to the calculated "
 					+ localPrice);
-			org.testng.Assert.fail();
+			softassert.assertEquals(pricefromsite, localPrice, "ERROR: The Value-Added Tax from the site"
+					+ pricefromsite + "is NOT equal to the calculated" + localPrice);
 		}
 		;
 
@@ -192,7 +208,8 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("The higher local " + higherpiechartfromlocal
 					+ " pie chart % is NOT equal to the higher pie chart % from the site " + higherpiechartfromsite);
-			org.testng.Assert.fail();
+			softassert.assertEquals(higherpiechartfromlocal, higherpiechartfromsite, "ERROR: The Value-Added Tax from the site"
+					+ higherpiechartfromsite + "is NOT equal to the calculated" + higherpiechartfromlocal);
 		}
 
 		// local pie chart lower value
@@ -206,15 +223,20 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("The lower local " + lowerpiechartfromlocal
 					+ " pie chart % is NOT equal to the higher pie chart % from the site " + lowerpiechartfromsite);
-			org.testng.Assert.fail();
+			softassert.assertEquals(lowerpiechartfromlocal, lowerpiechartfromsite, "ERROR: The Value-Added Tax from the site"
+					+ lowerpiechartfromsite + "is NOT equal to the calculated" + lowerpiechartfromlocal);
 		}
 
 		// delete NetPrice sendkeys
 		Tools.clearWebField(VatSum);
+		softassert.assertAll();
 		System.out.println("\n");
 	}
 
 	public static void comparePricesFilledByPrice() {
+		//soft assert
+		SoftAssert softassert = new SoftAssert();
+
 
 		// add X for Price
 		WebElement Price = driver.findElement(By.xpath(loc.getProperty("Price")));
@@ -245,7 +267,8 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("The Value-Added Tax from the site " + vatsumfromsite
 					+ " is NOT equal to the calculated " + localVATsum);
-			org.testng.Assert.fail();
+			softassert.assertEquals(vatsumfromsite, localVATsum, "ERROR: The Value-Added Tax from the site"
+					+ vatsumfromsite + "is NOT equal to the calculated" + localVATsum);
 		}
 		;
 
@@ -256,7 +279,8 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("Price without VAT from the site " + netpricefromsite
 					+ "  is NOT equal to the calculated " + localNetPrice);
-			org.testng.Assert.fail();
+			softassert.assertEquals(netpricefromsite, localNetPrice, "ERROR: The Value-Added Tax from the site"
+					+ netpricefromsite + "is NOT equal to the calculated" + localNetPrice);
 		}
 		;
 
@@ -296,7 +320,8 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("The higher local " + higherpiechartfromlocal
 					+ " pie chart % is NOT equal to the higher pie chart % from the site " + higherpiechartfromsite);
-			org.testng.Assert.fail();
+			softassert.assertEquals(higherpiechartfromsite, higherpiechartfromlocal, "ERROR: The Value-Added Tax from the site"
+					+ higherpiechartfromsite + "is NOT equal to the calculated" + higherpiechartfromlocal);
 		}
 
 		// local pie chart lower value
@@ -310,11 +335,13 @@ public class Calculation extends BaseTest {
 		} else {
 			System.out.println("The lower local " + lowerpiechartfromlocal
 					+ " pie chart % is NOT equal to the higher pie chart % from the site " + lowerpiechartfromsite);
-			org.testng.Assert.fail();
+			softassert.assertEquals(lowerpiechartfromsite, lowerpiechartfromlocal, "ERROR: The Value-Added Tax from the site"
+					+ lowerpiechartfromsite + "is NOT equal to the calculated" + lowerpiechartfromlocal);
 		}
 
 		// delete NetPrice sendkeys
 		Tools.clearWebField(Price);
+		softassert.assertAll();
 		System.out.println("\n");
 	}
 
