@@ -1,8 +1,10 @@
-package base;
+package utilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
+
+import base.BaseTest;
 
 public class GetVATpctComparison extends BaseTest {
 

@@ -1,9 +1,11 @@
-package base;
+package utilities;
 
 import org.apache.commons.math3.util.Precision;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
+
+import base.BaseTest;
 
 public class Calculation extends BaseTest {
 

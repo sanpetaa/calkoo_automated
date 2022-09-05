@@ -1,4 +1,4 @@
-package base;
+package utilities;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,6 +8,8 @@ import java.io.InputStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+
+import base.BaseTest;
 
 public class Tools extends BaseTest {
 
