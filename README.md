@@ -1,24 +1,24 @@
 # Calkoo Test Automation Base
 
 #### About 
-The goal of this project is fulfill my homework I get from the Global Blue REX Team.
+The goal of this project is to fulfill the homework I get from the Global Blue REX Team.
 ##### Task
 
-* Please identify at least two test cases for automation:
+* Please identify at least two test cases for the automation:
 * * explain why you would choose specifically those
-* * automate them using Cypress, Robot or Selenium (if having experience)
+* * automate them using Cypress, Robot, or Selenium (if having experience)
 
 #### Actual Testcases
 
 ##### testcase.CheckCalculations.java 
 
-Cheking the whole calculation process and compare it to my local calculation, because this is the main function of the site.
+Checking the whole calculation process and comparing it to my local calculation, because this is the main function of the site.
 
- I selected the 3 most commonly used countries from global blue TOP destinations: https://www.globalblue.com/corporate/media/press/global-blue-research-confirms-the-chinese-are-still-the-most-valuable-globe-shoppers
+ I selected the 3 most commonly used countries from global blue TOP destinations: https://www.globalblue.com/corporate/media/press/global-blue-research-confirms-the-chinese-are-still-the-most-valuable-globe-shoppers, because I do not have business information about the most important countries. 
 
 Check on all available VAT rates
-even If  I am filling the Netprice, VatSum or Price fields
-And Cheking the pie chart if it correct or not. 
+even If  I am filling the Net price, VatSum, or Price fields
+And Checking the pie chart if it is correct or not. 
 
 I used soft assertions.
 In case of any failure and the application taking screenshots.
@@ -27,17 +27,17 @@ In case of any failure and the application taking screenshots.
 If any change on the webpage will happen
 And if  multipliers will not be equivalent to the VAT rates
 Then the calculation would be wrong. 
-These informations are necessery for my first testcase.
+These pieces of information are necessary for my first test case.
 
 # GLOBAL BLUE - HOMEWORK
 
 Background info
-Calkoo introduced a simple online VAT calculator for calculating tax on their website:
+Calkoo introduced a simple online VAT calculator for calculating the tax on their website:
 
 http://www.calkoo.com/?lang=3&page=8
 
 ##### User story
-As a traveller, I want to calculate the various purchase/tax amounts to verify that my shop
+As a traveler, I want to calculate the various purchase/tax amounts to verify that my shop
 receipt is correct, and the merchant correctly charged the VAT for my recently bought items.
 
 ##### ACCEPTANCE CRITERIA
@@ -66,11 +66,13 @@ users/business/product owner based on the given information.
 #### Technological prerequisites
  
 * Installed Java JDK version 9+ 
-* Make sure environment path to Java JDK is set as JAVA_HOME 
-* Installed GIT available in command line 
-* Installed newest version of Chrome/Firefox browser
+* Make sure environment path to Java JDK
+* Installed GIT or clone from website
+* Installed the newest version of Chrome/Firefox browser
 * IDE of your choice for code development (Eclipse recommended and supported)
-* Tools installed: TestNG, Maven
+* Tools installed: 
+**TestNG- can be installed from Eclipse- Help- Eclipse Marketplace- Search for 'testng' and download it
+**Maven is an in-built application in Eclipse
 
 
 

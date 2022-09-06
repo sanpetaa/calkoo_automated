@@ -28,6 +28,7 @@ public class BaseTest {
 			System.out.println("The path is: " + System.getProperty("user.dir"));
 			FileReader fr = new FileReader(
 					System.getProperty("user.dir") + "/src/test/resources/configfiles/config.properties");
+			
 			FileReader fr1 = new FileReader(
 					System.getProperty("user.dir") + "/src/test/resources/configfiles/locators.properties");
 			prop.load(fr);

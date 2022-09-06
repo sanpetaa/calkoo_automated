@@ -36,7 +36,7 @@ public class CheckCalculations extends BaseTest {
 
 	}
 
-	//@Test
+	@Test
 	// User fill the NETPRICE and validate the result in case of any
 	public static void checkItalyCalculations() throws InterruptedException {
 		driver.findElement(By.xpath(loc.getProperty("Country"))).click();
@@ -56,7 +56,7 @@ public class CheckCalculations extends BaseTest {
 
 	}
 
-	//@Test
+	@Test
 	// User fill the NETPRICE and validate the result in case of 20% VAT rate
 	public static void checkUKCalculations() throws InterruptedException {
 		driver.findElement(By.xpath(loc.getProperty("Country"))).click();

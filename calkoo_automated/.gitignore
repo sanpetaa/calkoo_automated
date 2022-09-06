@@ -71,3 +71,4 @@ test-output/
 screenshot/
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse
+/target/

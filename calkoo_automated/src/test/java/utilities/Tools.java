@@ -39,14 +39,14 @@ public class Tools extends BaseTest {
 	}
 
 	public static void getdynamicVATpct() {
-
+		String path = System.getProperty("user.dir");
+		
 		// get element VATpct2
 		WebElement VATpct2 = driver.findElement(By.xpath(loc.getProperty("VATpct2")));
 		String s_VATpct2 = VATpct2.getAttribute("value");
 
 		try {
-			InputStream in = new FileInputStream(
-					"C://Automation//Workspace//GlobalBlueHomeWork//src//test//resources//configfiles//config.properties");
+			InputStream in = new FileInputStream(path+"/src/test/resources/configfiles/config.properties");
 			prop.load(in);
 		} catch (IOException ex) {
 			System.out.println(ex);
@@ -56,8 +56,7 @@ public class Tools extends BaseTest {
 		// Getting the value from our properties file
 
 		try {
-			prop.store(new FileOutputStream(
-					"C://Automation//Workspace//GlobalBlueHomeWork//src//test//resources//configfiles//config.properties"),
+			prop.store(new FileOutputStream(path+"/src/test/resources/configfiles/config.properties"),
 					null);
 		} catch (IOException ex) {
 			System.out.println(ex);
@@ -68,8 +67,7 @@ public class Tools extends BaseTest {
 		String s_VATpct1 = VATpct1.getAttribute("value");
 
 		try {
-			InputStream in = new FileInputStream(
-					"C://Automation//Workspace//GlobalBlueHomeWork//src//test//resources//configfiles//config.properties");
+			InputStream in = new FileInputStream(path+"/src/test/resources/configfiles/config.properties");
 			prop.load(in);
 		} catch (IOException ex) {
 			System.out.println(ex);
@@ -79,8 +77,7 @@ public class Tools extends BaseTest {
 		// Getting the value from our properties file
 
 		try {
-			prop.store(new FileOutputStream(
-					"C://Automation//Workspace//GlobalBlueHomeWork//src//test//resources//configfiles//config.properties"),
+			prop.store(new FileOutputStream(path+"/src/test/resources/configfiles/config.properties"),
 					null);
 		} catch (IOException ex) {
 			System.out.println(ex);
