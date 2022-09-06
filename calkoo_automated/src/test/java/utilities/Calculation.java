@@ -16,6 +16,8 @@ public class Calculation extends BaseTest {
 		// add X to the NETPRICE
 		WebElement NetPrice = driver.findElement(By.xpath(loc.getProperty("NetPrice")));
 		NetPrice.sendKeys(prop.getProperty("netprice"));
+		//message to understand
+		System.out.println("If I fill the 'Price without VAT' field with " + prop.getProperty("netprice"));
 		// get VATSUM calculation from site
 		WebElement VATsum = driver.findElement(By.xpath(loc.getProperty("VatSum")));
 		String vatsum = VATsum.getAttribute("value");
@@ -41,10 +43,10 @@ public class Calculation extends BaseTest {
 		//de helyette megy be localPrice
 		// compare prices from the site vs prices calculated
 		if (vatsumfromsite == localVATsum) {
-			System.out.println("The Value-Added Tax from the site " + vatsumfromsite + " is equal to the calculated "
+			System.out.println("Then the 'Value-Added Tax' from the site " + vatsumfromsite + " is equal to the calculated "
 					+ localVATsum);
 		} else {
-			System.out.println("The Value-Added Tax from the site " + vatsumfromsite
+			System.out.println("Then the 'Value-Added' Tax from the site " + vatsumfromsite
 					+ " is NOT equal to the calculated " + localVATsum);
 			// org.testng.Assert.fail();
 			softassert.assertEquals(vatsumfromsite, localVATsum, "ERROR: The Value-Added Tax from the site"
@@ -55,9 +57,9 @@ public class Calculation extends BaseTest {
 		// compare prices from the site vs prices calculated
 		if (pricefromsite == localPrice) {
 			System.out.println(
-					"Price incl. Tax from the site " + pricefromsite + " is equal to the calculated " + localPrice);
+					"Then the 'Price incl. Tax' from the site " + pricefromsite + " is equal to the calculated " + localPrice);
 		} else {
-			System.out.println("Price incl. Tax from the site " + pricefromsite + "  is NOT equal to the calculated "
+			System.out.println("Then the 'Price incl. Tax' from the site " + pricefromsite + "  is NOT equal to the calculated "
 					+ localPrice);
 			softassert.assertEquals(pricefromsite,localPrice,  "ERROR: The Value-Added Tax from the site"
 					+ pricefromsite + "is NOT equal to the calculated" + localPrice);
@@ -131,6 +133,7 @@ public class Calculation extends BaseTest {
 		// add X for VATSUM
 		WebElement VatSum = driver.findElement(By.xpath(loc.getProperty("VatSum")));
 		VatSum.sendKeys(prop.getProperty("vatsum"));
+		System.out.println("If I fill the 'Value-Added TAX' field with " + prop.getProperty("vatsum"));
 		// get VATSUM calculation from site
 		WebElement NetPrice = driver.findElement(By.xpath(loc.getProperty("NetPrice")));
 		String netprice = NetPrice.getAttribute("value");
@@ -152,10 +155,10 @@ public class Calculation extends BaseTest {
 
 		// compare prices from the site vs prices calculated
 		if (netpricefromsite == localNetPrice) {
-			System.out.println("The price without VAT from the site " + netpricefromsite
+			System.out.println("Then the 'Price without VAT' from the site " + netpricefromsite
 					+ " is equal to the calculated " + localNetPrice);
 		} else {
-			System.out.println("Theprice without VAT from the site " + netpricefromsite
+			System.out.println("Then the 'Price without VAT' from the site " + netpricefromsite
 					+ " is NOT equal to the calculated " + localVATsum);
 			softassert.assertEquals(netpricefromsite, localNetPrice, "ERROR: The Value-Added Tax from the site"
 					+ netpricefromsite + "is NOT equal to the calculated" + localNetPrice);
@@ -165,9 +168,9 @@ public class Calculation extends BaseTest {
 		// compare prices from the site vs prices calculated
 		if (pricefromsite == localPrice) {
 			System.out.println(
-					"Price incl. Tax from the site " + pricefromsite + " is equal to the calculated " + localPrice);
+					"Then the 'Price incl. Tax' from the site " + pricefromsite + " is equal to the calculated " + localPrice);
 		} else {
-			System.out.println("Price incl. Tax from the site " + pricefromsite + "  is NOT equal to the calculated "
+			System.out.println("Then the 'Price incl. Tax' from the site " + pricefromsite + "  is NOT equal to the calculated "
 					+ localPrice);
 			softassert.assertEquals(pricefromsite, localPrice, "ERROR: The Value-Added Tax from the site"
 					+ pricefromsite + "is NOT equal to the calculated" + localPrice);
@@ -243,6 +246,7 @@ public class Calculation extends BaseTest {
 		// add X for Price
 		WebElement Price = driver.findElement(By.xpath(loc.getProperty("Price")));
 		Price.sendKeys(prop.getProperty("price"));
+		System.out.println("If I fill the 'Price incl. VAT' field with " + prop.getProperty("price"));
 		// get VATSUM calculation from site
 		WebElement NetPrice = driver.findElement(By.xpath(loc.getProperty("NetPrice")));
 		String netprice = NetPrice.getAttribute("value");
@@ -264,10 +268,10 @@ public class Calculation extends BaseTest {
 
 		// compare prices from the site vs prices calculated
 		if (vatsumfromsite == localVATsum) {
-			System.out.println("The Value-Added Tax from the site " + vatsumfromsite + " is equal to the calculated "
+			System.out.println("Then the 'Value-Added Tax' from the site " + vatsumfromsite + " is equal to the calculated "
 					+ localVATsum);
 		} else {
-			System.out.println("The Value-Added Tax from the site " + vatsumfromsite
+			System.out.println("Then the 'Value-Added Tax' from the site " + vatsumfromsite
 					+ " is NOT equal to the calculated " + localVATsum);
 			softassert.assertEquals(vatsumfromsite, localVATsum, "ERROR: The Value-Added Tax from the site"
 					+ vatsumfromsite + "is NOT equal to the calculated" + localVATsum);
@@ -276,10 +280,10 @@ public class Calculation extends BaseTest {
 
 		// compare prices from the site vs prices calculated
 		if (netpricefromsite == localNetPrice) {
-			System.out.println("Price without VAT from the site " + netpricefromsite + " is equal to the calculated "
+			System.out.println("Then the 'Price without VAT' from the site " + netpricefromsite + " is equal to the calculated "
 					+ localNetPrice);
 		} else {
-			System.out.println("Price without VAT from the site " + netpricefromsite
+			System.out.println("Then the 'Price without VAT' from the site " + netpricefromsite
 					+ "  is NOT equal to the calculated " + localNetPrice);
 			softassert.assertEquals(netpricefromsite, localNetPrice, "ERROR: The Value-Added Tax from the site"
 					+ netpricefromsite + "is NOT equal to the calculated" + localNetPrice);
