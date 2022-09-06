@@ -74,7 +74,9 @@ users/business/product owner based on the given information.
 **TestNG- can be installed from Eclipse- Help- Eclipse Marketplace- Search for 'testng' and download it
 **Maven is an in-built application in Eclipse
 
-Please run the test cases from /testrunner/testng.xml (right click)-->Run As-->1 TestNGSuite
+*How to add project: Import project-->Projects from Git (with smart import)-->Clone URl-->https://github.com/sanpetaa/calkoo_automated.git-->next-->check in master only-->next-->finish
+
+*Please run the test cases from the /testrunner/testng.xml folder (in the base folder)-->(right click)-->Run As-->1 TestNGSuite
 
 #### Download with use of GIT:
 The remote repository is public and it can be found below. 
