@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/reportngClass.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/reportngClass.js"></script>
+  <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="js/json-min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.tablesorter').tablesorter({sortList: [[0,0]]});
+	});
+  </script>
+</head>
+<body onload="doParse(); return false;" onkeypress="collapseExpand();">
+<div class="well well-large">
+	<b>Test Info</>
+	<table class="table">
+	  <tr>
+	    <th>Test Name : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Test name</span>
+			</div>
+	    </th>
+	    <th id="testNameId">Test</th> 
+	  </tr>
+	  <tr>
+	    <th>Test Class : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testClassId')"/>
+	    		<span class="tooltiptextCustom">Copy full path Class name</span>
+			</div>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testClassNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Class name</span>
+			</div>
+	    </th> 
+	    <th id="testClassId">testcase.VatRatesAvailable<br>testcase.CheckCalculations<br></th>
+	    <th id="testClassNameId" hidden="true">VatRatesAvailable<br>CheckCalculations<br></th>
+	  </tr>
+	  <tr>
+	    <th>Suite Name : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite name</span>
+			</div>
+		</th>
+	    <th id="suiteNameId">Calkoo_automation</th>
+	  </tr>
+	  <tr>
+	    <th>Suite XML : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteXMLId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite full path name</span>
+			</div>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteXMLNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite file name</span>
+			</div>
+	    </th> 
+	  	<th id="suiteXMLId">C:\Users\sanpe\git\calkoo_automated\calkoo_automated\testrunner\testng.xml</th>
+	  	<th id="suiteXMLNameId" hidden="true">testng.xml</th>
+	  </tr>
+	  	  <tr>
+	    <th>Total Time : </th>
+	    <th></th>
+	    <th>00:00:27</th> 
+	  </tr>
+	  <tr>
+	    <th>Total Steps : </th>
+	   	<th></th>
+	    <th>6</th> 
+	  </tr>
+	  <tr>
+	    <th>Status : </th>
+	    <th></th>
+	    <th><font color="green">PASS</font></th> 
+	  </tr>
+	</table>
+</div>
+<div class="well well-large">
+	<div class="row">
+		<div class="col-xs-12">
+	        <div class="text-right">
+	            <button id="hideResults" type="button" class="btn-danger" onclick="collapseExpand(this);" onkeypress="collapseExpand(this);" class="btn pull-right" title="Click or Press Any key to collapse/expand All Failed Tests and Configuration Methods">Show Only Failures</button>
+	        </div>
+	    </div>
+	</div>
+	<table class="tablesorter" border="1">
+		<thead>
+		<tr>
+		<th class="headerTime">Time</th>
+		<th class="headerTime" width="12%">Info</th>
+		<th class="headerTime" width="88%">Test</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+				
+				
+												
+				
+				
+												<tr>
+			<td class="time">1662812413701</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('a663dc18-e176-4047-96bd-f45d766cf94a','block');changeSingleIcon('span-a663dc18-e176-4047-96bd-f45d766cf94a');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcase.CheckCalculations</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-a663dc18-e176-4047-96bd-f45d766cf94a' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1662812413701</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>checkFranceCalculations</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>5,940s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="a663dc18-e176-4047-96bd-f45d766cf94a" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1662812425404</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('5b9c380f-1865-4f04-8fb7-7364dcb33935','block');changeSingleIcon('span-5b9c380f-1865-4f04-8fb7-7364dcb33935');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcase.CheckCalculations</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-5b9c380f-1865-4f04-8fb7-7364dcb33935' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1662812425404</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>checkUKCalculations</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>3,378s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="5b9c380f-1865-4f04-8fb7-7364dcb33935" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1662812419642</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('623ab253-c46e-4487-8c9d-405bd818aae8','block');changeSingleIcon('span-623ab253-c46e-4487-8c9d-405bd818aae8');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcase.CheckCalculations</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-623ab253-c46e-4487-8c9d-405bd818aae8' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1662812419642</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>checkItalyCalculations</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>5,760s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="623ab253-c46e-4487-8c9d-405bd818aae8" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1662812410939</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('3dfcbf87-6b7a-4339-b88d-7a9d7a69f8bf','block');changeSingleIcon('span-3dfcbf87-6b7a-4339-b88d-7a9d7a69f8bf');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcase.VatRatesAvailable</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-3dfcbf87-6b7a-4339-b88d-7a9d7a69f8bf' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1662812410939</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>checkItalyVATrates</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>1,450s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="3dfcbf87-6b7a-4339-b88d-7a9d7a69f8bf" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1662812407782</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('d4ab6953-a5df-4782-a8fa-72c29f0634d7','block');changeSingleIcon('span-d4ab6953-a5df-4782-a8fa-72c29f0634d7');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcase.VatRatesAvailable</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-d4ab6953-a5df-4782-a8fa-72c29f0634d7' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1662812407782</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>checkFranceVATrates</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>3,154s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="d4ab6953-a5df-4782-a8fa-72c29f0634d7" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1662812412391</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('7eb715f1-c2a1-46e4-8f3d-9b020672ac48','block');changeSingleIcon('span-7eb715f1-c2a1-46e4-8f3d-9b020672ac48');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcase.VatRatesAvailable</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-7eb715f1-c2a1-46e4-8f3d-9b020672ac48' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1662812412391</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>checkUKVATrates</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>1,306s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="7eb715f1-c2a1-46e4-8f3d-9b020672ac48" style="display: block;">
+					</td>
+	</div>
+</tr>
+					  
+	</tbody>
+	</table>
+</div>
+</body>
+</html>
